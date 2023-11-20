@@ -1,0 +1,1 @@
+ streamlit run c:\Users\kushhov\Desktop\test_app\test_app7.py
