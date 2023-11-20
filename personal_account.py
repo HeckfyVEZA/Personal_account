@@ -117,7 +117,7 @@ if authentication_status:
         st.session_state['key'] +=1
 
     origin_key = st.session_state['key']
-    Data_frame = pd.read_excel('C:\\Users\\kushhov\\Desktop\\test_app\\test_table.xlsx') #Оригинальная выгрузка
+    Data_frame = pd.read_excel('test_table.xlsx') #Оригинальная выгрузка
 
     List_unic_link = list(Data_frame['Ссылка'].drop_duplicates()) #Список из уникальных ссылок
     List_unic_otvet= list(Data_frame['Ответственный'].drop_duplicates()) #Список из уникальных ссылок
@@ -232,7 +232,7 @@ if authentication_status:
     #    )
 
     #_____________________________________ Блок работы с новой таблицей
-    auth_frame = pd.read_excel('C:\\Users\\kushhov\\Desktop\\test_app\\origin_table.xlsx') #Первоначальная выгрузка
+    auth_frame = pd.read_excel('origin_table.xlsx') #Первоначальная выгрузка
     origin_frame = auth_frame.loc[auth_frame['Ответственный'] == name]
     
     col = st.columns(6)
